@@ -6,12 +6,12 @@ post = mc$MclustOutput$z
 
 library(mixpack)
 L8 = list(diag(NCOL(post)),post) 
-L7 = mergeStep_const_entropy(L8[[2]])
-L6 = mergeStep_const_entropy(L7[[2]])
-L5 = mergeStep_const_entropy(L6[[2]])
-L4 = mergeStep_const_entropy(L5[[2]])
-L3 = mergeStep_const_entropy(L4[[2]])
-L2 = mergeStep_const_entropy(L3[[2]])
+L7 = mergeStep(L8[[2]], 'const', 'entropy')
+L6 = mergeStep(L7[[2]], 'const', 'entropy')
+L5 = mergeStep(L6[[2]], 'const', 'entropy')
+L4 = mergeStep(L5[[2]], 'const', 'entropy')
+L3 = mergeStep(L4[[2]], 'const', 'entropy')
+L2 = mergeStep(L3[[2]], 'const', 'entropy')
 
 ##Hi han diferencies
 
