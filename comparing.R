@@ -2,7 +2,6 @@ library(mclust)
 
 data(Baudry_etal_2010_JCGS_examples)
 mc = clustCombi(ex4.2)
-plot(mc, ex4.2)
 post = mc$MclustOutput$z
 
 library(mixpack)
