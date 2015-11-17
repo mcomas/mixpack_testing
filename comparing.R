@@ -36,10 +36,10 @@ l_omega = list(
 )
 
 fun1 = function(post){
-  mixpack::get_hierarchical_partition(post, l_omega[['cnst']], l_lambda[['entr']])
+  mixpack::get_hierarchical_partition(post, l_omega[['dich']], l_lambda[['entr']])
 }
 fun2 = function(post){
-  mixpack::get_hierarchical_partition_fast(post, 'const', 'entropy')
+  mixpack::get_hierarchical_partition_fast(post, 'dich', 'entropy')
 }
 
 

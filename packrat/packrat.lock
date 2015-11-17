@@ -15,8 +15,14 @@ Hash: 20a88b2c9c84aecff2702789a4d102f5
 
 Package: Rcpp
 Source: CRAN
-Version: 0.12.1
-Hash: 02ad87c166e4a92976052106e3826893
+Version: 0.12.2
+Hash: 1928c2b7372e3f033217335f3fad25a3
+
+Package: RcppArmadillo
+Source: CRAN
+Version: 0.6.200.2.0
+Hash: ef678fa1ad57c64970c4660cc2ceb865
+Requires: Rcpp
 
 Package: brew
 Source: CRAN
@@ -85,13 +91,13 @@ Hash: b08c52dae92a0a11e64a4deea032ec33
 
 Package: mixpack
 Source: github
-Version: 0.1
-Hash: 570ac40497d4fad0d1b88288b656915d
-Requires: Rcpp, mvtnorm
+Version: 0.2
+Hash: 7f84578b0b066bfb347edcd8c4ba12dd
+Requires: Rcpp, RcppArmadillo, mvtnorm
 GithubRepo: mixpack
 GithubUsername: mcomas
 GithubRef: master
-GithubSha1: 6fa3e7df585cf8f297c6ffeabdbe5938ceed2b36
+GithubSha1: bc30785a0cc776b2e12c84ac3d301a46c7c9d88a
 
 Package: mvtnorm
 Source: CRAN
@@ -106,7 +112,7 @@ Hash: aed7d17407538df551a57caf6289c8bf
 Package: roxygen2
 Source: CRAN
 Version: 5.0.1
-Hash: dae9cae5dbb4f63c9eeb089d5fc23b39
+Hash: 764de5dbf10bcd671fde95798bf96112
 Requires: Rcpp, brew, digest, stringi, stringr
 
 Package: rstudioapi
@@ -139,5 +145,5 @@ Hash: 803d662762e532705c2c066a82d066e7
 Package: xml2
 Source: CRAN
 Version: 0.1.2
-Hash: f6de7afd3d80c2dc9795d7e6aa3de8c2
+Hash: d3a4a61753f1ebf32548bdd9ab709c4b
 Requires: BH, Rcpp
