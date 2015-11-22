@@ -6,12 +6,12 @@ post = mc$MclustOutput$z
 
 library(mixpack)
 L8 = list(diag(NCOL(post)),post) 
-L7 = mergeStep(L8[[2]], 'const', 'entropy')
-L6 = mergeStep(L7[[2]], 'const', 'entropy')
-L5 = mergeStep(L6[[2]], 'const', 'entropy')
-L4 = mergeStep(L5[[2]], 'const', 'entropy')
-L3 = mergeStep(L4[[2]], 'const', 'entropy')
-L2 = mergeStep(L3[[2]], 'const', 'entropy')
+L7 = mergeStep(L8[[2]], omega = 'cnst', lambda = 'entr')
+L6 = mergeStep(L7[[2]], omega = 'cnst', lambda = 'entr')
+L5 = mergeStep(L6[[2]], omega = 'cnst', lambda = 'entr')
+L4 = mergeStep(L5[[2]], omega = 'cnst', lambda = 'entr')
+L3 = mergeStep(L4[[2]], omega = 'cnst', lambda = 'entr')
+L2 = mergeStep(L3[[2]], omega = 'cnst', lambda = 'entr')
 
 ##Hi han diferencies
 
@@ -36,10 +36,10 @@ l_omega = list(
 )
 
 fun1 = function(post){
-  mixpack::get_hierarchical_partition(post, l_omega[['dich']], l_lambda[['entr']])
+  mixpack::get_hierarchical_partition(post, l_omega[['dich']], l_lambda[['coda.norm']])
 }
 fun2 = function(post){
-  mixpack::get_hierarchical_partition_fast(post, 'dich', 'entropy')
+  mixpack::get_hierarchical_partition_fast(post = post, omega = 'dich', lambda = 'coda.norm')
 }
 
 
